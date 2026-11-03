@@ -29,12 +29,18 @@ Langue de travail : français (sauf demande contraire).
 
 | Besoin | Moyen privilégié | Alternative |
 |---|---|---|
-| Mise en page avec texte exact (flyer, menu, carte, post) | HTML/CSS à la taille finale → `tools/export.mjs` (PDF vectoriel + PNG) | Canva (`generate-design` puis `edit-design`) si le client veut un fichier Canva éditable |
+| Mise en page avec texte exact (flyer, menu, carte, post) | HTML/CSS à la taille finale → `tools/export.js` (PDF vectoriel + PNG) | Canva (`generate-design` puis `edit-design`) si le client veut un fichier Canva éditable |
 | Visuel/illustration/photo d'ambiance | Générateur d'images (Canva `generate-image`, Figma `generate_image`, Adobe Firefly si autorisé) **sans texte dans l'image** | Photos fournies par le client |
 | Retouche, détourage | Adobe/Photoshop si connecté, Canva `remove-background` | Pillow (recadrage, netteté, niveaux) |
 | Logo, pictos | SVG écrit à la main (vectoriel réel) | — |
-| Fichier imprimeur | `export.mjs --bleed` + `preflight.py` | Adobe `design-to-pdf` si disponible |
-| Déclinaisons réseaux sociaux | `export.mjs` aux dimensions de la plateforme | Canva `resize-design`, Orshot |
+| Fichier imprimeur | `export.js --bleed` + `preflight.py` | Adobe `design-to-pdf` si disponible |
+| Déclinaisons réseaux sociaux | `export.js` aux dimensions de la plateforme | Canva `resize-design`, Orshot |
+
+**Règles de rendu PDF vectoriel (Chromium)** — sinon le PDF contient des images 72 ppp ou des polices Type3 :
+- Pas de `linear-gradient`/`radial-gradient` CSS, `box-shadow`, `text-shadow`, `filter`, `backdrop-filter`, couleurs `rgba`/`opacity` : dessiner trames, dégradés, ombres et festons en **SVG** (ou calque dupliqué décalé pour une ombre de texte).
+- Polices en **TTF/OTF statiques** téléchargées dans `SOURCES/fonts/` (Google Fonts / dépôt github.com/google/fonts, licence OFL) et déclarées en `@font-face` ; jamais de polices variables ; toujours `font-weight` égal à une graisse réellement présente (pas de gras synthétique sur `<h1>`, `<b>`, `<strong>`).
+- Fond de `html` et `body` = couleur du bord du visuel (évite un liseré au bord du fond perdu).
+- `SOURCES/BRIEF.md` est créé par `new_project.sh` : le lire (Read) avant de l'éditer.
 
 **Règle typographique clé** : les textes (prix, coordonnées, titres) ne sont JAMAIS confiés à un générateur d'images. On génère l'image sans texte, puis on compose le texte en HTML/SVG/Canva.
 

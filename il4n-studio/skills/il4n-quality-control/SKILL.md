@@ -15,7 +15,7 @@ Toujours, en dernière étape de chaque Skill IL4N, et après chaque correction.
 1. **Rendu** : `python3 ~/.claude/il4n-studio/tools/preview.py EXPORTS/X.pdf --out APERCUS/QC_X` (ou utiliser le PNG HD). Regarder l'image entière, puis zoomer sur les zones de texte (recadrage Pillow) si le texte est petit.
 2. **Extraction du texte** : `python3 -c "import pymupdf,sys;print(pymupdf.open(sys.argv[1])[0].get_text())" EXPORTS/X_print.pdf` → comparer à `SOURCES/BRIEF.md` mot à mot (noms, prix, téléphone, adresse, horaires, dates, URL, e-mail).
 3. **Checklist** (cocher dans `APERCUS/QC_X.md`) :
-   - [ ] Orthographe, grammaire, accents, majuscules, espaces insécables avant « : ; ! ? € % » (typographie française), apostrophes typographiques.
+   - [ ] Orthographe, grammaire, accents, majuscules, espaces insécables avant « : ; ! ? € % » (typographie française), apostrophes typographiques — sauf dans les URL, e-mails, identifiants et noms de marque déposés, qui restent strictement identiques. Toute normalisation typographique d'un texte client est signalée dans « Points à valider ».
    - [ ] Informations identiques à la source ; aucune info inventée (prix, promo, date, horaire, avis, coordonnées).
    - [ ] Concept fictif → mention « CONCEPT FICTIF — IL4N STUDIO » présente ; commande réelle → aucune mention fictive.
    - [ ] Hiérarchie : message principal identifiable en 3 s ; CTA visible.

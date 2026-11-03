@@ -51,8 +51,8 @@ function parseArgs(argv) {
   const isPrint = a.unit === 'mm';
   const fullW = isPrint ? a.w + 2 * a.bleed : a.w;
   const fullH = isPrint ? a.h + 2 * a.bleed : a.h;
-  const vpW = Math.round(isPrint ? fullW * MM : fullW);
-  const vpH = Math.round(isPrint ? fullH * MM : fullH);
+  const vpW = Math.ceil(isPrint ? fullW * MM : fullW);
+  const vpH = Math.ceil(isPrint ? fullH * MM : fullH);
   const dsf = isPrint ? a.dpi / 96 : a.scale;
 
   fs.mkdirSync(path.dirname(path.resolve(a.out)), { recursive: true });
@@ -68,16 +68,24 @@ function parseArgs(argv) {
   const overflow = await page.evaluate(() => ({ w: document.documentElement.scrollWidth, h: document.documentElement.scrollHeight }));
   if (overflow.w > vpW + 1 || overflow.h > vpH + 1) console.warn(`ATTENTION contenu plus grand que la page : ${overflow.w}x${overflow.h}px pour ${vpW}x${vpH}px`);
 
+  // PNG au pixel exact (mm → px à la résolution demandée) + métadonnée ppp
+  const pngFix = (file, wmm, hmm) => {
+    const px = v => Math.round(v / 25.4 * a.dpi);
+    try { execFileSync('python3', [path.join(__dirname, 'pngmeta.py'), file, String(px(wmm)), String(px(hmm)), String(a.dpi)], { stdio: 'inherit' }); }
+    catch (e) { console.warn('ATTENTION métadonnées PNG non écrites :', e.message); }
+  };
   const outputs = [];
   if (a.png) {
     if (isPrint) {
       const hd = `${a.out}_HD.png`;
       const b = a.bleed * MM;
       await page.screenshot({ path: hd, clip: { x: b, y: b, width: a.w * MM, height: a.h * MM } });
+      pngFix(hd, a.w, a.h);
       outputs.push(hd);
       if (a.bleed > 0) {
         const bl = `${a.out}_bleed.png`;
-        await page.screenshot({ path: bl, clip: { x: 0, y: 0, width: vpW, height: vpH } });
+        await page.screenshot({ path: bl, clip: { x: 0, y: 0, width: fullW * MM, height: fullH * MM } });
+        pngFix(bl, fullW, fullH);
         outputs.push(bl);
       }
     } else {

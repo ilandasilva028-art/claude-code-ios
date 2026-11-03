@@ -36,9 +36,9 @@ mkdir -p "$ROOT/CLIENTS"
 echo "→ Dossier studio : $ROOT"
 
 if [ "${1:-}" != "--no-deps" ]; then
-  echo "→ Dépendances Python (pillow, pypdf, pymupdf, qrcode, opencv-python-headless)"
-  python3 -m pip install --user --quiet --upgrade pillow pypdf pymupdf qrcode opencv-python-headless \
-    || python3 -m pip install --user --quiet --break-system-packages pillow pypdf pymupdf qrcode opencv-python-headless \
+  echo "→ Dépendances Python (pillow, pypdf, pymupdf, qrcode, opencv-python-headless, fonttools)"
+  python3 -m pip install --user --quiet --upgrade pillow pypdf pymupdf qrcode opencv-python-headless fonttools \
+    || python3 -m pip install --user --quiet --break-system-packages pillow pypdf pymupdf qrcode opencv-python-headless fonttools \
     || echo "   ⚠️  pip a échoué : installez ces paquets manuellement."
   if command -v node >/dev/null && command -v npm >/dev/null; then
     echo "→ Playwright + Chromium (rendu HTML → PDF/PNG)"

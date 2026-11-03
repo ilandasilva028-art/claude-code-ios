@@ -63,7 +63,9 @@ def main():
         for f in page.get_fonts(full=True):
             xref, ext, ftype, basefont = f[0], f[1], f[2], f[3]
             fonts_seen[basefont] = ext
-            if ext in ("n/a", "") and ftype not in ("Type3",):
+            if ftype == "Type3":
+                errors.append(f"p{pno} police Type3 « {basefont or 'sans nom'} » (gras/italique synthétique ou police variable rasterisée) — utiliser une graisse statique réelle")
+            elif ext in ("n/a", ""):
                 errors.append(f"p{pno} police non incorporée : {basefont} ({ftype})")
 
         # Images : résolution effective + espace colorimétrique
@@ -102,7 +104,7 @@ def main():
         safe = pymupdf.Rect(trim.x0 + a.safe * MM, trim.y0 + a.safe * MM, trim.x1 - a.safe * MM, trim.y1 - a.safe * MM)
         safe_tol = safe + (-1, -1, 1, 1)  # tolérance d'1 pt pour les jambages
         small, outside = {}, set()
-        for block in page.get_text("dict")["blocks"]:
+        for block in page.get_text("dict", flags=pymupdf.TEXT_ACCURATE_BBOXES)["blocks"]:
             for line in block.get("lines", []):
                 for span in line["spans"]:
                     txt = span["text"].strip()
@@ -124,8 +126,8 @@ def main():
 
     status = "ÉCHEC" if errors else ("AVERTISSEMENTS" if warns else "CONFORME")
     lines = [f"# Preflight IL4N STUDIO — {status}", "", f"Format fini {tw}×{th} mm · fond perdu {a.bleed} mm · sécurité {a.safe} mm · min {a.min_dpi:.0f} ppp · min {a.min_pt} pt", ""]
-    lines += ["## Erreurs bloquantes", *(f"- ❌ {e}" for e in errors or ["aucune"]), ""]
-    lines += ["## Avertissements", *(f"- ⚠️ {w}" for w in warns or ["aucun"]), ""]
+    lines += ["## Erreurs bloquantes", *([f"- ❌ {e}" for e in errors] or ["- aucune"]), ""]
+    lines += ["## Avertissements", *([f"- ⚠️ {w}" for w in warns] or ["- aucun"]), ""]
     lines += ["## Informations", *(f"- {i}" for i in infos)]
     report = "\n".join(lines)
     print(report)
