@@ -3,21 +3,51 @@
   "fictif": true,
   "nom": "Mistraline",
   "metier": "Plomberie · Chauffage · Climatisation",
-  "accroche": "Votre plombier-chauffagiste dans le Comtat Venaissin",
-  "sous_accroche": "Dépannage, rénovation de salle de bains et entretien de chaudière. Devis gratuit, travail propre, un seul interlocuteur.",
+  "accroche": "Le plombier qui arrive avant le mistral.",
+  "sous_accroche": "Dépannage, salle de bains, chauffage et climatisation à Sarrians et dans tout le Comtat Venaissin.",
   "ville": "Sarrians",
   "telephone": "04 65 71 12 34",
   "email": "contact@example.com",
   "adresse": "Sarrians (84260)",
-  "horaires": "Du lundi au vendredi, 8 h – 18 h",
-  "couleurs": { "principale": "#123B5D", "accent": "#D9622B", "fond": "#F7F3EC" },
+  "horaires": "Du lundi au vendredi, 8 h – 18 h",
+  "couleurs": {
+    "principale": "#0E2A47",
+    "accent": "#C46A35",
+    "fond": "#F4EFE6",
+    "eau": "#4FA3C7"
+  },
   "services": [
-    { "titre": "Dépannage plomberie", "texte": "Fuite, WC bouché, chauffe-eau en panne : intervention rapide dans le secteur.", "icone": "goutte" },
-    { "titre": "Salle de bains", "texte": "Rénovation complète ou remplacement de baignoire par une douche à l'italienne.", "icone": "douche" },
-    { "titre": "Chauffage", "texte": "Installation et entretien annuel de chaudière, radiateurs, plancher chauffant.", "icone": "flamme" },
-    { "titre": "Climatisation", "texte": "Pose et entretien de climatisation réversible pour l'été comme pour l'hiver.", "icone": "flocon" }
+    {
+      "titre": "Dépannage plomberie",
+      "texte": "Fuite, WC bouché, chauffe-eau en panne : intervention rapide dans le secteur.",
+      "icone": "goutte"
+    },
+    {
+      "titre": "Salle de bains",
+      "texte": "Rénovation complète ou remplacement de baignoire par une douche à l'italienne.",
+      "icone": "douche"
+    },
+    {
+      "titre": "Chauffage",
+      "texte": "Installation et entretien annuel de chaudière, radiateurs, plancher chauffant.",
+      "icone": "flamme"
+    },
+    {
+      "titre": "Climatisation",
+      "texte": "Pose et entretien de climatisation réversible pour l'été comme pour l'hiver.",
+      "icone": "flocon"
+    }
   ],
-  "zone": ["Sarrians", "Aubignan", "Monteux", "Carpentras", "Loriol-du-Comtat", "Vacqueyras", "Beaumes-de-Venise", "Jonquières"],
+  "zone": [
+    "Sarrians",
+    "Aubignan",
+    "Monteux",
+    "Carpentras",
+    "Loriol-du-Comtat",
+    "Vacqueyras",
+    "Beaumes-de-Venise",
+    "Jonquières"
+  ],
   "apropos": "Artisan installé à Sarrians, je travaille seul et je suis présent du devis à la fin du chantier. Je vous explique les travaux simplement et je laisse le chantier propre.",
   "avis": [],
   "mentions": {
@@ -25,5 +55,20 @@
     "siret": "— (démo)",
     "responsable": "— (démo)",
     "hebergeur": "Netlify, Inc. — [adresse à recopier depuis la page légale officielle de Netlify avant mise en ligne]"
-  }
+  },
+  "marque": {
+    "logo": "marque/symbole.svg",
+    "police_titre": "marque/bricolage.woff2",
+    "film_mp4": "marque/film.mp4",
+    "film_poster": "marque/film-poster.jpg"
+  },
+  "accroche_accent": "avant le mistral",
+  "atouts": [
+    "Devis gratuit",
+    "Chantier laissé propre",
+    "Un seul interlocuteur"
+  ],
+  "services_intro": "Pour les particuliers et les professionnels du Comtat Venaissin.",
+  "contact_intro": "Appelez ou écrivez : je vous réponds et je passe faire le devis.",
+  "tag": "Artisan à Sarrians · Vaucluse"
 }

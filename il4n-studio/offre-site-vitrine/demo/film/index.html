@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr" data-resolution="square">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1080" />
+    <!-- Film de marque Mistraline (CONCEPT FICTIF — IL4N STUDIO) : boucle de 8 s, sans texte, pour le haut du site. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root { --ventoux: #0e2a47; --cuivre: #c46a35; --calcaire: #f4efe6; --eau: #4fa3c7; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1080px; overflow: hidden; background: var(--ventoux); }
+      #root { position: relative; width: 100%; height: 100%; }
+      .clip { position: absolute; inset: 0; }
+      svg { position: absolute; inset: 0; width: 1080px; height: 1080px; }
+      .trait { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="8" data-width="1080" data-height="1080">
+      <div id="scene" class="clip" data-start="0" data-duration="8" data-track-index="0">
+        <svg viewBox="0 0 1080 1080" aria-hidden="true">
+          <!-- trame discrète -->
+          <g opacity="0.07" stroke="#f4efe6" stroke-width="1">
+            <path d="M0 180H1080M0 360H1080M0 540H1080M0 720H1080M0 900H1080M180 0V1080M360 0V1080M540 0V1080M720 0V1080M900 0V1080" />
+          </g>
+          <!-- silhouette du Ventoux -->
+          <path id="ventoux" class="trait" stroke="#f4efe6" stroke-width="3" opacity="0.35" pathLength="1"
+                d="M40 930 L170 880 L270 820 L340 740 L395 680 L425 660 L455 680 L520 740 L600 820 L700 900 L760 930 H1040" />
+          <!-- rafales de mistral -->
+          <path id="vent1" class="trait" stroke="#c46a35" stroke-width="16" pathLength="1" d="M120 300 H560" />
+          <path id="vent2" class="trait" stroke="#c46a35" stroke-width="16" pathLength="1" d="M120 400 H700" />
+          <path id="vent3" class="trait" stroke="#c46a35" stroke-width="16" pathLength="1" d="M120 500 H460" />
+          <!-- le vent devient tuyau : coude, descente, robinet -->
+          <path id="tuyau" class="trait" stroke="#c46a35" stroke-width="16" pathLength="1"
+                d="M700 400 H780 A60 60 0 0 1 840 460 V560" />
+          <!-- goutte -->
+          <path id="goutte" fill="#4fa3c7" d="M840 600 c18 24 30 38 30 54 a30 30 0 0 1 -60 0 c0 -16 12 -30 30 -54 z" />
+          <!-- ondes -->
+          <ellipse id="onde1" cx="840" cy="930" rx="60" ry="14" fill="none" stroke="#4fa3c7" stroke-width="5" />
+          <ellipse id="onde2" cx="840" cy="930" rx="60" ry="14" fill="none" stroke="#4fa3c7" stroke-width="4" />
+        </svg>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const lignes = ["#ventoux", "#vent1", "#vent2", "#vent3", "#tuyau"];
+      tl.set(lignes, { strokeDasharray: 1, strokeDashoffset: 1 }, 0);
+      tl.set("#goutte", { opacity: 0, scale: 0.2, transformOrigin: "50% 0%" }, 0);
+      tl.set(["#onde1", "#onde2"], { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, 0);
+
+      // 0–1.6 s : le Ventoux se dessine, les rafales arrivent en décalé
+      tl.to("#ventoux", { strokeDashoffset: 0, duration: 1.6, ease: "power2.inOut" }, 0);
+      tl.to("#vent1", { strokeDashoffset: 0, duration: 0.9, ease: "power3.out" }, 0.2);
+      tl.to("#vent2", { strokeDashoffset: 0, duration: 1.0, ease: "power3.out" }, 0.4);
+      tl.to("#vent3", { strokeDashoffset: 0, duration: 0.8, ease: "power3.out" }, 0.6);
+      // 1.4–2.6 s : la rafale centrale devient un tuyau en cuivre
+      tl.to("#tuyau", { strokeDashoffset: 0, duration: 1.2, ease: "power2.inOut" }, 1.4);
+      // 2.6–3.4 s : une goutte se forme au robinet
+      tl.to("#goutte", { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(2)" }, 2.6);
+      // 3.8–4.6 s : elle tombe
+      tl.to("#goutte", { y: 250, duration: 0.8, ease: "power2.in" }, 3.8);
+      tl.to("#goutte", { opacity: 0, duration: 0.1 }, 4.6);
+      // 4.6–6 s : ondes
+      tl.to("#onde1", { opacity: 1, duration: 0.05 }, 4.6);
+      tl.to("#onde1", { scale: 2.6, opacity: 0, duration: 1.3, ease: "power2.out" }, 4.65);
+      tl.to("#onde2", { opacity: 1, duration: 0.05 }, 4.85);
+      tl.to("#onde2", { scale: 3.4, opacity: 0, duration: 1.4, ease: "power2.out" }, 4.9);
+      // 2.6–6.4 s : les rafales respirent légèrement
+      tl.to("#vent1", { x: 24, duration: 1.9, ease: "sine.inOut", yoyo: true, repeat: 1 }, 2.6);
+      tl.to("#vent3", { x: 36, duration: 1.9, ease: "sine.inOut", yoyo: true, repeat: 1 }, 2.6);
+      // 6.4–7.6 s : tout se retire vers la droite pour boucler proprement
+      tl.to(lignes, { strokeDashoffset: -1, duration: 1.1, ease: "power2.in", stagger: 0.05 }, 6.4);
+      tl.set("#goutte", { y: 0 }, 7.9);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

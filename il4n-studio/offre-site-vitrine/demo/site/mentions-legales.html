@@ -4,79 +4,113 @@
 <title>Mentions légales — Mistraline</title>
 <meta name="description" content="Mentions légales">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#123B5D">
+<meta name="theme-color" content="#0E2A47">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8dGl0bGU+TWlzdHJhbGluZSDigJQgc3ltYm9sZTwvdGl0bGU+CiAgPHBhdGggZD0iTTggMThIMzAiIHN0cm9rZT0iI0M0NkEzNSIgc3Ryb2tlLXdpZHRoPSI1Ii8+CiAgPHBhdGggZD0iTTggMzBIMzZhMTAgMTAgMCAwIDEgMTAgMTB2MyIgc3Ryb2tlPSIjQzQ2QTM1IiBzdHJva2Utd2lkdGg9IjUiLz4KICA8cGF0aCBkPSJNOCA0MkgyNCIgc3Ryb2tlPSIjQzQ2QTM1IiBzdHJva2Utd2lkdGg9IjUiLz4KICA8cGF0aCBkPSJNNDYgNDljMyA0IDUgNi40IDUgOWE1IDUgMCAwIDEtMTAgMGMwLTIuNiAyLTUgNS05eiIgZmlsbD0iIzRGQTNDNyIvPgo8L3N2Zz4=">
+<link rel="preload" href="assets/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{--p:#123B5D;--a:#D9622B;--f:#F7F3EC;--t:#1d2229;--m:#5a6270;--r:14px}
+@font-face{font-family:"Titre";src:url(assets/bricolage.woff2) format("woff2");font-weight:200 800;font-display:swap}
+:root{--p:#0E2A47;--a:#C46A35;--f:#F4EFE6;--eau:#4FA3C7;--t:#17202b;--m:#566170;--r:18px;
+--titre:"Titre",var(--texte);--texte:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--t);background:var(--f)}
+body{font:17px/1.65 var(--texte);color:var(--t);background:var(--f)}
 a{color:inherit}
-.w{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.logo b{font-family:var(--titre);font-weight:750;letter-spacing:-.02em}
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
 .fictif{background:#fff3cd;color:#6b4e00;text-align:center;font-size:13px;padding:6px 12px;letter-spacing:.04em}
-header{position:sticky;top:0;z-index:10;background:var(--p);color:#fff}
-header .w{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
-.logo{font-weight:800;font-size:22px;letter-spacing:.02em;text-decoration:none}
-.logo small{display:block;font-weight:500;font-size:12px;opacity:.8;letter-spacing:.06em;text-transform:uppercase}
-nav{display:flex;gap:22px;font-size:15px}
-nav a{text-decoration:none;opacity:.9}
-nav a:hover{opacity:1;text-decoration:underline}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:#fff;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;border:0;font-size:16px;white-space:nowrap}
-.btn:hover{filter:brightness(1.08)}
-.btn.ghost{background:transparent;border:2px solid currentColor}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--p) 94%,transparent);backdrop-filter:blur(8px);color:#fff}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:70px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{display:block;font-size:24px;line-height:1}
+.logo small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-top:3px}
+nav{display:flex;gap:24px;font-size:15px}
+nav a{text-decoration:none;opacity:.88}
+nav a:hover{opacity:1;color:var(--a)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--a);color:#fff;font-weight:700;text-decoration:none;padding:13px 22px;border-radius:999px;border:0;font-size:16px;white-space:nowrap;transition:transform .15s,filter .15s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.55)}
 .btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
-.hero{background:var(--p);color:#fff;padding:56px 0 72px;position:relative;overflow:hidden}
-.hero .w{position:relative;z-index:1}
-.hero:after{content:"";position:absolute;right:-140px;bottom:-200px;width:460px;height:460px;border-radius:50%;border:70px solid rgba(255,255,255,.06)}
-.hero h1{font-size:clamp(30px,5.2vw,52px);line-height:1.1;max-width:15ch;margin:10px 0 16px}
-.hero p{font-size:clamp(17px,2.2vw,20px);max-width:52ch;opacity:.92}
-.tag{display:inline-block;background:rgba(255,255,255,.14);padding:5px 12px;border-radius:999px;font-size:14px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;position:relative;z-index:1}
-.atouts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:15px;opacity:.9}
-.atouts span:before{content:"✓ ";color:var(--a);font-weight:800}
-section{padding:64px 0}
-h2{font-size:clamp(26px,3.6vw,36px);line-height:1.2;margin-bottom:8px;color:var(--p)}
-.intro{color:var(--m);max-width:60ch;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.card{background:#fff;border-radius:var(--r);padding:24px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 8px 24px rgba(18,59,93,.06)}
-.card svg{width:44px;height:44px;padding:9px;border-radius:12px;background:var(--f);fill:none;stroke:var(--a);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
-.card h3{font-size:19px;margin-bottom:6px}
+header .court{display:none}
+.hero{background:var(--p);color:#fff;padding:56px 0 80px;overflow:hidden}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,5.4vw,60px);line-height:1.04;margin:16px 0 18px}
+.hero h1 em{font-style:normal;color:var(--a)}
+.hero p{font-size:clamp(17px,2vw,20px);max-width:48ch;opacity:.9}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);padding:6px 14px;border-radius:999px;font-size:14px}
+.tag:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--eau)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.atouts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:15px;opacity:.9;list-style:none}
+.atouts li:before{content:"✓ ";color:var(--a);font-weight:800}
+.film{position:relative;aspect-ratio:1;border-radius:28px;overflow:hidden;background:var(--p);box-shadow:0 30px 60px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.08)}
+.film video,.film img{width:100%;height:100%;object-fit:cover;display:block}
+.film img{position:absolute;inset:0}
+.film video{position:relative;z-index:1}
+section{padding:80px 0}
+.titre{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.motif{width:40px;height:16px;flex:none;fill:none;stroke:var(--a);stroke-width:3;stroke-linecap:round}
+h2{font-size:clamp(28px,3.8vw,42px);line-height:1.1;color:var(--p)}
+.intro{color:var(--m);max-width:60ch;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{position:relative;background:#fff;border-radius:var(--r);padding:28px 24px 24px;box-shadow:0 1px 2px rgba(0,0,0,.05),0 12px 30px rgba(14,42,71,.07);transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.card .num{position:absolute;top:22px;right:24px;font-family:var(--titre);font-weight:700;color:var(--a);opacity:.5;font-size:15px}
+.card svg{width:48px;height:48px;padding:10px;border-radius:14px;background:var(--f);fill:none;stroke:var(--a);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.card h3{font-size:21px;line-height:1.25;margin-bottom:8px;color:var(--p)}
 .card p{color:var(--m);font-size:16px}
 .zone{background:#fff}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chips li{list-style:none;background:var(--f);border:1px solid rgba(18,59,93,.12);padding:8px 14px;border-radius:999px;font-size:15px}
-.apropos .w{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.apropos blockquote{font-size:20px;line-height:1.5;border-left:4px solid var(--a);padding-left:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.chips li{background:var(--f);border:1px solid rgba(14,42,71,.12);padding:9px 16px;border-radius:999px;font-size:15px}
+.chips li:first-child{background:var(--p);color:#fff;border-color:var(--p)}
+.apropos .w{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.apropos blockquote{font-family:var(--titre);font-size:clamp(22px,2.6vw,30px);line-height:1.3;color:var(--p);font-weight:600;letter-spacing:-.01em}
+.apropos blockquote:before{content:"“";display:block;font-size:80px;line-height:.6;color:var(--a);margin-bottom:12px}
 .avis .card p{color:var(--t);font-style:italic}
 .avis .card b{display:block;margin-top:10px;font-style:normal;color:var(--m);font-size:14px}
-.contact{background:var(--p);color:#fff}
+.contact{background:var(--p);color:#fff;position:relative;overflow:hidden}
 .contact h2{color:#fff}
+.contact .intro{color:#fff;opacity:.85}
 .contact .grid{gap:14px}
-.contact .card{background:rgba(255,255,255,.08);box-shadow:none;color:#fff}
-.contact .card p{color:#fff;opacity:.85}
-.contact .card a{font-weight:700;font-size:19px;text-decoration:none;word-break:break-word}
-footer{background:#0d2b44;color:#cfd8e3;font-size:14px;padding:22px 0}
-footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.contact .card{background:rgba(255,255,255,.07);box-shadow:none;color:#fff;border:1px solid rgba(255,255,255,.1)}
+.contact .card p{color:#fff;opacity:.75;font-size:14px;text-transform:uppercase;letter-spacing:.1em}
+.contact .card a,.contact .card b{font-family:var(--titre);font-weight:700;font-size:21px;text-decoration:none;word-break:break-word}
+footer{background:color-mix(in srgb,var(--p) 80%,#000);color:#cfd8e3;font-size:14px;padding:26px 0}
+footer .w{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+footer .logo svg{width:28px;height:28px}
+footer .logo b{font-size:18px}
 .mobile-call{display:none}
-header .court{display:none}
-@media (max-width:760px){
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.film video{display:none}.btn,.card{transition:none}}
+@media (max-width:860px){
   nav{display:none}
   header .btn .num{display:none}
   header .court{display:inline}
-  header .btn{padding:10px 14px;font-size:15px}
-  .hero:after{display:none}
-  .apropos .w{grid-template-columns:1fr;gap:20px}
-  section{padding:48px 0}
-  .mobile-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:20;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25)}
-  footer{padding-bottom:84px}
+  header .logo small{display:none}
+  header .btn{padding:10px 16px;font-size:15px}
+  .hero{padding:36px 0 56px}
+  .hero .w{grid-template-columns:1fr;gap:32px}
+  .film{max-width:420px;width:100%;justify-self:center}
+  .apropos .w{grid-template-columns:1fr;gap:16px}
+  section{padding:56px 0}
+  .mobile-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:20;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+  footer{padding-bottom:90px}
 }
 </style>
 </head><body>
 <div class="fictif">CONCEPT FICTIF — IL4N STUDIO · entreprise et coordonnées inventées</div>
-<header><div class="w"><a class="logo" href="index.html">Mistraline<small>Plomberie · Chauffage · Climatisation</small></a></div></header>
-<main><section><div class="w"><h2>Mentions légales</h2>
+<header><div class="w"><a class="logo" href="index.html"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>Mistraline — symbole</title>
+  <path d="M8 18H30" stroke="#C46A35" stroke-width="5"/>
+  <path d="M8 30H36a10 10 0 0 1 10 10v3" stroke="#C46A35" stroke-width="5"/>
+  <path d="M8 42H24" stroke="#C46A35" stroke-width="5"/>
+  <path d="M46 49c3 4 5 6.4 5 9a5 5 0 0 1-10 0c0-2.6 2-5 5-9z" fill="#4FA3C7"/>
+</svg><span><b>Mistraline</b><small>Plomberie · Chauffage · Climatisation</small></span></a></div></header>
+<main><section><div class="w"><div class="titre"><svg class="motif" viewBox="0 0 40 16" aria-hidden="true"><path d="M2 3h18M2 8h28M2 13h12"/></svg><h2>Mentions légales</h2></div>
 <p class="intro">Éditeur : Mistraline (entreprise fictive) · SIRET : — (démo) · Responsable de la publication : — (démo)<br>
 Adresse : Sarrians (84260) · Téléphone : 04 65 71 12 34 · E-mail : contact@example.com<br>
 Hébergeur : Netlify, Inc. — [adresse à recopier depuis la page légale officielle de Netlify avant mise en ligne]<br>
 Ce site ne dépose aucun cookie et ne collecte aucune donnée personnelle.</p>
 <a class="btn" href="index.html">Retour au site</a></div></section></main>
+
 </body></html>
