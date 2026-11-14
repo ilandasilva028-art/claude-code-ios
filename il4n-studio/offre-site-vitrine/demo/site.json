@@ -1,0 +1,29 @@
+{
+  "_note": "CONCEPT FICTIF — IL4N STUDIO. Entreprise, téléphone (plage ARCEP réservée à la fiction) et e-mail (domaine réservé example.com) inventés pour la démo.",
+  "fictif": true,
+  "nom": "Mistraline",
+  "metier": "Plomberie · Chauffage · Climatisation",
+  "accroche": "Votre plombier-chauffagiste dans le Comtat Venaissin",
+  "sous_accroche": "Dépannage, rénovation de salle de bains et entretien de chaudière. Devis gratuit, travail propre, un seul interlocuteur.",
+  "ville": "Sarrians",
+  "telephone": "04 65 71 12 34",
+  "email": "contact@example.com",
+  "adresse": "Sarrians (84260)",
+  "horaires": "Du lundi au vendredi, 8 h – 18 h",
+  "couleurs": { "principale": "#123B5D", "accent": "#D9622B", "fond": "#F7F3EC" },
+  "services": [
+    { "titre": "Dépannage plomberie", "texte": "Fuite, WC bouché, chauffe-eau en panne : intervention rapide dans le secteur.", "icone": "goutte" },
+    { "titre": "Salle de bains", "texte": "Rénovation complète ou remplacement de baignoire par une douche à l'italienne.", "icone": "douche" },
+    { "titre": "Chauffage", "texte": "Installation et entretien annuel de chaudière, radiateurs, plancher chauffant.", "icone": "flamme" },
+    { "titre": "Climatisation", "texte": "Pose et entretien de climatisation réversible pour l'été comme pour l'hiver.", "icone": "flocon" }
+  ],
+  "zone": ["Sarrians", "Aubignan", "Monteux", "Carpentras", "Loriol-du-Comtat", "Vacqueyras", "Beaumes-de-Venise", "Jonquières"],
+  "apropos": "Artisan installé à Sarrians, je travaille seul et je suis présent du devis à la fin du chantier. Je vous explique les travaux simplement et je laisse le chantier propre.",
+  "avis": [],
+  "mentions": {
+    "raison_sociale": "Mistraline (entreprise fictive)",
+    "siret": "— (démo)",
+    "responsable": "— (démo)",
+    "hebergeur": "Netlify, Inc. — [adresse à recopier depuis la page légale officielle de Netlify avant mise en ligne]"
+  }
+}

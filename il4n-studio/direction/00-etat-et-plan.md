@@ -49,3 +49,8 @@ Notes /5 (5 = meilleur). « Coût » = coût en argent ET en temps d'Ilan.
 | D | Croissance | Tableau de suivi (contactés, réponses, devis, ventes, CA) — chiffres saisis réels uniquement | Non | — |
 | E | Directeur | Bilan : continuer, ajuster ou arrêter (→ opportunité 2) | Non | 0 réponse positive sur 10 → arrêt |
 Développeur/Auditeur Codex : activés seulement à l'étape B si la démo dépasse ce que l'agent graphiste fait seul (fichier de mission préparé, exécution par Ilan).
+
+## Journal
+- 2026-11-14 — Étape 1 (analyse marché) : critère atteint, demande non prouvée → `01-analyse-marche-site-vitrine.md`.
+- 2026-11-14 — Étapes 2-3 : démo fictive + générateur de site + fiche de prospection 10 artisans → `../offre-site-vitrine/`.
+  En attente : choix d'Ilan sur la mise en ligne de la démo (Netlify, gratuit) et les 10 appels.
