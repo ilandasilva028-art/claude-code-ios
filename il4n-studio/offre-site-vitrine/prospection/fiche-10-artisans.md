@@ -41,6 +41,11 @@ Ordre conseillé : d'abord Sarrians (voisinage = argument fort), puis Aubignan, 
 ## SMS (seulement après accord au téléphone)
 > Bonjour, c'est Ilan (IL4N Studio, Sarrians). Comme convenu, voici un exemple de site pour artisan : [lien démo]. Site à 290 €, vous validez avant de payer. Mes tarifs : il4nstudio.netlify.app
 
+## Vidéo à envoyer (seulement après accord au téléphone)
+`../video-prospection/IL4N-site-290-video-10s.mp4` — 10 s, format vertical, se lit directement dans WhatsApp.
+Message d'accompagnement :
+> Bonjour, c'est Ilan (IL4N Studio, Sarrians). Comme convenu, voici en 10 secondes ce que je propose. L'exemple montré est une entreprise fictive : le vôtre serait à votre nom, avec vos services. Bonne journée !
+
 ## Réponses aux objections
 | Objection | Réponse honnête |
 |---|---|

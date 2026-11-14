@@ -7,6 +7,9 @@
 - `demo/film/` : film de marque **HyperFrames** (HTML + GSAP → MP4, 8 s en boucle, sans texte, 25 Ko en 720 px).
   Refaire le rendu : `cd demo/film && npx --yes hyperframes@0.9.46 check && npx --yes hyperframes@0.9.46 render -o film.mp4`
   puis `ffmpeg -i film.mp4 -an -vf scale=720:720 -c:v libx264 -pix_fmt yuv420p -crf 26 -movflags +faststart ../marque/film.mp4`.
+- `video-prospection/` : vidéo verticale **HyperFrames** de 10 s (1080×1920, 0,9 Mo) pour présenter l'offre 290 € par WhatsApp/SMS
+  → `IL4N-site-290-video-10s.mp4`. Contrôle HyperFrames : 0 erreur, aucun texte affiché trop peu de temps.
+  Refaire : `cd video-prospection && npx --yes hyperframes@0.9.46 check && npx --yes hyperframes@0.9.46 render -o video.mp4`.
 - `apercus/` : captures ordinateur et mobile.
 - `prospection/` : fiche des 10 artisans, script d'appel, objections, `suivi.csv` (à remplir avec des chiffres réels).
 
