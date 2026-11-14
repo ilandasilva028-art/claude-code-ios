@@ -1,5 +1,5 @@
 # IL4N STUDIO — État des lieux et plan (Directeur IA)
-Date : 2026-11-14 · Budget : 0 € · Statut : en attente de décision d'Ilan
+Date : 2026-11-14 · Budget : 0 € · Statut : opportunité n°2 choisie par Ilan (2026-11-14) — étape 1 faite, voir 01-analyse-marche-site-vitrine.md
 
 ## 1. État actuel (constaté, pas supposé)
 - **Site** il4nstudio.netlify.app (lu le 2026-11-14) : graphiste + sites internet à **Sarrians (84)**.
