@@ -10,6 +10,8 @@
 - `video-prospection/` : vidéo verticale **HyperFrames** de 10 s (1080×1920, 0,9 Mo) pour présenter l'offre 290 € par WhatsApp/SMS
   → `IL4N-site-290-video-10s.mp4`. Contrôle HyperFrames : 0 erreur, aucun texte affiché trop peu de temps.
   Refaire : `cd video-prospection && npx --yes hyperframes@0.9.46 check && npx --yes hyperframes@0.9.46 render -o video.mp4`.
+  Musique originale (synthèse locale, aucun droit tiers) : `video-prospection/audio/musique.py` → version `IL4N-site-290-video-10s-musique.mp4`.
+  Voix off : texte et consignes dans `video-prospection/audio/TEXTE-VOIX-OFF.md` ; traitement et mix : `python3 video-prospection/audio/voix.py enregistrement.m4a`.
 - `apercus/` : captures ordinateur et mobile.
 - `prospection/` : fiche des 10 artisans, script d'appel, objections, `suivi.csv` (à remplir avec des chiffres réels).
 
