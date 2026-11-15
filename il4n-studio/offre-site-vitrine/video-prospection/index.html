@@ -14,27 +14,27 @@
       #root { position: relative; width: 100%; height: 100%; }
       .clip { position: absolute; inset: 0; }
       .halo { position: absolute; width: 900px; height: 900px; border-radius: 50%; filter: blur(120px); opacity: .35; }
-      .centre { display: flex; flex-direction: column; justify-content: center; padding: 0 130px; }
-      .petit { font-size: 34px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--or); }
-      .grand { font-size: 100px; font-weight: 850; line-height: 1.02; letter-spacing: -.045em; }
+      .centre { display: flex; flex-direction: column; justify-content: center; padding: 300px 300px 680px 120px; }
+      .petit { font-size: 30px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--or); }
+      .grand { font-size: 80px; font-weight: 850; line-height: 1.02; letter-spacing: -.045em; }
       .grand em { font-style: normal; color: var(--or); }
-      .legende { position: absolute; left: 130px; right: 130px; top: 150px; font-size: 64px; font-weight: 800; line-height: 1.08; letter-spacing: -.035em; }
-      .telephone { position: absolute; left: 50%; top: 420px; width: 600px; height: 1200px; margin-left: -300px;
-                   border-radius: 84px; background: #050508; padding: 20px; box-shadow: 0 60px 120px rgba(0,0,0,.6), 0 0 0 2px #2a2733; }
-      .ecran { position: relative; width: 560px; height: 1160px; border-radius: 66px; overflow: hidden; background: #0e2a47; }
-      .ecran img.page { position: absolute; left: 0; top: 64px; width: 560px; }
-      .ecran img.bouton { position: absolute; left: 0; bottom: 22px; width: 560px; }
+      .legende { position: absolute; left: 120px; right: 200px; top: 300px; font-size: 58px; font-weight: 800; line-height: 1.08; letter-spacing: -.035em; }
+      .telephone { position: absolute; left: 50%; top: 560px; width: 520px; height: 960px; margin-left: -300px;
+                   border-radius: 74px; background: #050508; padding: 20px; box-shadow: 0 60px 120px rgba(0,0,0,.6), 0 0 0 2px #2a2733; }
+      .ecran { position: relative; width: 480px; height: 920px; border-radius: 56px; overflow: hidden; background: #0e2a47; }
+      .ecran img.page { position: absolute; left: 0; top: 56px; width: 480px; }
+      .ecran img.bouton { position: absolute; left: 0; bottom: 18px; width: 480px; }
       .encoche { position: absolute; top: 18px; left: 50%; width: 170px; height: 46px; margin-left: -85px; border-radius: 30px; background: #050508; z-index: 2; }
-      .mention { position: absolute; left: 0; right: 0; bottom: 150px; text-align: center; font-size: 30px; color: var(--gris); }
-      .mention span { display: inline-block; padding: 12px 26px; border: 2px solid #3a3642; border-radius: 999px; }
-      .prix { font-size: 290px; font-weight: 900; letter-spacing: -.07em; line-height: .9; color: var(--or); }
-      .sous { font-size: 58px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; margin-top: 34px; }
-      .liste { margin-top: 56px; display: flex; flex-direction: column; gap: 22px; font-size: 42px; color: var(--papier); }
+      .mention { position: absolute; left: 120px; right: 200px; top: 456px; text-align: left; font-size: 28px; color: var(--gris); }
+      .mention span { display: inline-block; padding: 8px 22px; border: 2px solid #3a3642; border-radius: 999px; }
+      .prix { font-size: 230px; font-weight: 900; letter-spacing: -.07em; line-height: .9; color: var(--or); }
+      .sous { font-size: 50px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; margin-top: 34px; }
+      .liste { margin-top: 44px; display: flex; flex-direction: column; gap: 18px; font-size: 40px; color: var(--papier); }
       .liste div:before { content: "✓  "; color: var(--or); font-weight: 900; }
-      .logo { font-size: 220px; font-weight: 950; letter-spacing: -.09em; line-height: 1; }
+      .logo { font-size: 190px; font-weight: 950; letter-spacing: -.09em; line-height: 1; }
       .logo span { color: var(--or); }
-      .fin p { font-size: 42px; color: var(--papier); margin-top: 18px; }
-      .fin .tel { font-size: 92px; font-weight: 850; letter-spacing: -.03em; color: var(--blanc); margin-top: 90px; }
+      .fin p { font-size: 40px; color: var(--papier); margin-top: 18px; }
+      .fin .tel { font-size: 80px; font-weight: 850; letter-spacing: -.03em; color: var(--blanc); margin-top: 60px; }
       .fin .url { font-size: 44px; color: var(--or); margin-top: 12px; font-weight: 600; }
     </style>
   </head>
@@ -69,14 +69,14 @@
       <div id="s3" class="clip centre" data-start="5.9" data-duration="1.85" data-track-index="3">
         <div class="petit">Votre site internet</div>
         <div class="prix" id="prix" style="margin-top:30px">290&nbsp;€</div>
-        <div class="sous" id="s3b">Vous validez avant de payer.</div>
+        <div class="sous" id="s3b">Vous validez avant de&nbsp;payer.</div>
         <div class="liste" id="s3c"><div>Adapté au mobile</div><div>Un seul interlocuteur</div></div>
       </div>
 
       <!-- 4 · signature -->
       <div id="s4" class="clip centre fin" data-start="7.7" data-duration="2.3" data-track-index="4">
         <div class="logo" id="logo">il4n<span>.</span></div>
-        <p>Graphisme &amp; sites internet · Sarrians</p>
+        <p>Graphisme &amp; sites internet<br>à Sarrians</p>
         <div class="tel" id="fin-tel">06 10 55 71 25</div>
         <div class="url">il4nstudio.netlify.app</div>
       </div>
@@ -93,8 +93,8 @@
       // 2 · téléphone (2.45 – 6.3 s)
       tl.from("#tel", { y: 900, rotation: 4, duration: 0.7, ease: "power3.out" }, 2.45);
       tl.from("#s2a", { opacity: 0, y: 30, duration: 0.4, ease: "power3.out" }, 2.55);
-      tl.to("#page", { y: -1250, duration: 1.2, ease: "power2.inOut" }, 3.3);
-      tl.to("#page", { y: -2300, duration: 0.9, ease: "power2.inOut" }, 4.65);
+      tl.to("#page", { y: -1070, duration: 1.2, ease: "power2.inOut" }, 3.3);
+      tl.to("#page", { y: -1970, duration: 0.9, ease: "power2.inOut" }, 4.65);
       tl.to("#s2", { opacity: 0, scale: 0.94, duration: 0.25, ease: "power2.in" }, 5.75);
 
       // 3 · offre (6.2 – 7.9 s)
